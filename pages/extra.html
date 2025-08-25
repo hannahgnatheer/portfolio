@@ -1,0 +1,50 @@
+<p>Developed daily weather forecasts for South Wales. XGBoost led the stack-beating Logistic Regression, Decision Trees, Random Forest, LightGBM, and Gradient Boosting, with 98.6% accuracy (macro-F1 0.81).</p>
+<p>Analyzed global B Corp data across regions/sectors. Built Auto ARIMA forecasts for sector growth and ANN/SVM/Random Forest models for impact-score prediction, identifying the top drivers and informing sustainability strategy</p>
+<p>Scraped and harmonised data across platforms. Analysed IMDb/YouTube engagement and sentiment for AGT and BGT using Python (pandas, BeautifulSoup) and Excel. Built Tableau dashboards that revealed declining engagement and informed re-engagement tactics</p>
+
+
+        <section class="services" id="services">
+            <h2 class="heading">Services</h2>
+
+                <div class="services-container">
+                    <div class="service-box">
+                        <div class="service-info">
+                            <h4>Data analyst</h4>
+                            <p>I transform complex, messy data into clear, decision-ready intelligence. My work spans rigorous cleaning, exploratory and statistical analysis, and predictive modelling, supported by transparent methodology and reproducible workflows. I specialise in time-series and geospatial/weather analytics and present outcomes through concise narratives and executive-level visuals.</p>
+                        </div>
+                    </div>
+
+                    <div class="service-box">
+                        <div class="service-info">
+                            <h4>Data Engineer</h4>
+                            <p>I design and automate reliable data pipelines that make analytics accurate, timely, and auditable. Using robust data modelling and ETL/ELT practices, I build ingestion from APIs/files/databases, enforce quality checks, and document lineage and governance. Solutions are version-controlled, scalable, and ready for cloud deployment with monitoring and alerting in place.</p>
+                        </div>
+                    </div>
+
+                    <div class="service-box">
+                        <div class="service-info">
+                            <h4>Web Developer</h4>
+                            <p>I build responsive, performant websites and data-driven web applications with clean, maintainable code. I focus on accessible UI, API integration, SEO, and load-time optimisation, then ship via modern CI/CD for dependable releases. Deliverables include a production deployment, source repository, and clear documentation for easy handover.</p>                        </div>
+                    </div>
+
+                    <div class="service-box">
+                        <div class="service-info">
+                            <h4>BI Analyst</h4>
+                            <p>I convert business questions into trustworthy, self-serve analytics. I design semantic models, define KPIs, and develop efficient datasets and interactive dashboards with strong governance, refresh schedules, and row-level security where required. Reports are performance-tuned and accompanied by user guides to ensure adoption and consistency across teams.</p>
+                        </div>
+                    </div>
+
+                </div>
+        </section>
+
+Daily weather in South Wales was analysed using a merged historical dataset (1973–2025) spanning 17 stations and 322,983 records.
+Exploratory analysis showed sizeable gaps for snow/snowdepth/solar-related fields, steady warming across seasons—most clearly in 
+winter, and a post-2017 shift toward higher winter precipitation falling as rain rather than snow. 
+Rain was by far the most frequent condition, consistent with rising precipitation and warmer winters. 
+Correlation analysis highlighted strong links between rain and precipitation features (precip, precipprob, precipcover >0.6) 
+and negative associations between clear conditions and cloud cover/humidity. For multi-label condition forecasting, 
+a MultiOutputClassifier was trained with several base learners; XGBoost performed best (accuracy: 98.65%, macro-F1: 0.8085, 
+precision: 0.9965), narrowly ahead of Logistic Regression and Gradient Boosting, with Random Forest and Decision Trees close behind 
+and LightGBM lowest among the tested models. Hyperparameter tuning (GridSearchCV/manual) identified compact trees/estimators as 
+effective settings. Overall, ensemble/boosting approaches proved well-suited to South Wales’ nonlinear, microclimate-influenced 
+patterns, but future work could incorporate real-time/hourly data and interpretability tooling to strengthen operational use.

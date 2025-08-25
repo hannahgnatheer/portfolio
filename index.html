@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width,initial-scale=1.0">
+        <title>
+            My Portfolio
+        </title>
+        <link rel="stylesheet" href="style.css">
+        <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+        
+    </head>
+    <body>
+        <header class="header">
+            <a href="#home" class="logo">Hannah<span>Natheer</span></a>
+            <i class='bx bx-menu' id="menu-icon"></i>
+            <nav class="navbar" >
+                <a href="http://127.0.0.1:5500/My-Portfolio-main/myPage/index.html#home" class="active">Home</a>
+                <a href="http://127.0.0.1:5500/My-Portfolio-main/myPage/index.html/#education" >Education</a>
+                <a href="http://127.0.0.1:5500/My-Portfolio-main/myPage/index.html#testimonials" >Testimonials</a>
+                <a href="http://127.0.0.1:5500/My-Portfolio-main/myPage/index.html/#contact" >Contact</a>
+            </nav>
+        </header>
+        
+        <section class="home" id="home">
+            <div class="home-content">
+                <h1>Hi, It's <span>Me</span></h1>
+                <h3 class="text-animation">I'm a <span> </span></h3>
+                <p>
+                    Motivated postgraduate data analyst, possessing a software engineering foundation and practical expertise in machine learning, data analytics, and comprehensive development projects. Proven ability to collect and analyse data to drive insights, build predictive models, and communicate results to diverse stakeholders. Adaptable, curious and fast learner with a passion for climate-related analytics and a strong commitment to collaboration and integrity                </p>      
+                <div class="social-icons">
+                    <a href="https://www.linkedin.com/in/hanagnat/"><i class='bx bxl-linkedin'></i></a>
+                    <a href="https://github.com/hannahgnatheer"><i class='bx bxl-github' ></i></a>
+                    <a href="https://www.instagram.com/hannah_gen_nat/"><i class='bx bxl-instagram' ></i></a>
+                    <a href="https://x.com/HannahNatheer"><i class='bx bxl-twitter' ></i></a>
+                </div>   
+                <div class="btn-group">
+                    <a href="https://docs.google.com/document/d/1MfbVm_0niB2kirCRjbaBTvKFkjF7myH1/edit?usp=drive_link&ouid=112323698041443212505&rtpof=true&sd=true" class="btn">Download CV</a>
+
+                    <a href="#contact" class="btn">Contact</a>
+                </div>
+            </div>
+
+            <div class="home-img">
+                <img src="image (2).jpg" alt="">
+            </div>
+        </section>
+
+        <section class="education" id="education">
+            <h2 class="heading">Education</h2>
+                <div class="timeline-items">
+                    <div class="timeline-item">
+                        <div class="timeline-dot"></div>
+                            <div class="timeline-date">2025</div>
+                            <div class="timeline-content"><h3>Cardiff Metropolitan University<br>Cardiff, United Kingdom</h3><p>MSc in Data Science<br>Grade: Distinction<br></p></div>                             
+                   </div>
+
+                    <div class="timeline-item">
+                        <div class="timeline-dot"></div>    
+                           <div class="timeline-date">2023</div>
+                           <div class="timeline-content"><h3>Cardiff Metropolitan University<br>Cardiff, United Kingdom</h3><p>BSc(Hons) in Software Engineering<br>Grade: Second Class Lower Division</p></div>                         
+                   </div>
+
+                   <div class="timeline-item">
+                    <div class="timeline-dot"></div>    
+                       <div class="timeline-date">2022</div>
+                       <div class="timeline-content"><h3>Esoft Metro Campus<br>Batticaloa, Sri-Lanka</h3><p>Pearson BTEC HND in Computing<br>Grade: Merit</p></div>                         
+                  </div>
+
+                </div>
+        </section>
+
+        <section class="testimonials" id="testimonials">
+            <div class="testimonials-box">
+                <h2 class="heading">Projects</h2>
+                
+                <div class="wrapper">
+                    <div class="testimonial-item">
+                        <h2>Machine Learning based Weather Forecasting</h2><br>
+                        <a href="pages/ML-Weather.html" class="btn">More</a>                   
+                    </div>
+
+                    <div class="testimonial-item">
+                        <h2>An analysis of B Corp companies and Forecasting</h2><br>
+                        <a href="pages/B-Corp.html" class="btn">More</a>
+                    </div>
+
+                    <div class="testimonial-item">
+                        <h2>An analysis of Syco’s Entertainment Shows</h2><br>
+                        <a href="pages/Syco's Show.html" class="btn">More</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <section class="contact" id="contact">
+            <h2 class="heading">Contact<span>Me</span></h2>
+
+            <form id="contactForm">
+                <div class="input-group">
+                    <div class="input-box">
+                        <input type="text" id="fullName" placeholder="Full Name" required minlength="3" pattern="[A-Za-z\s]+">
+                        <span class="error" id="nameError"></span>
+                        <input type="email" id="email" placeholder="Email" required>
+                        <span class="error" id="emailError"></span>
+                    </div>
+                    <div class="input-box">
+                        <input type="text" id="contactNumber" placeholder="Contact Number" required pattern="\+\d{2}-\d{2}-\d{4}-\d{3}">
+                        <span class="error" id="contactError"></span>
+                        <input type="text" id="subject" placeholder="Subject" required minlength="3">
+                        <span class="error" id="subjectError"></span>
+                    </div>
+                </div>
+            
+                <div class="input-group-2">
+                    <textarea id="message" cols="30" rows="10" placeholder="Your Message" required minlength="10"></textarea>
+                    <span class="error" id="messageError"></span>
+                    <input type="button" value="Send Message" class="btn" onclick="sendEmail()">
+                </div>
+            </form>
+               
+               
+        </section>
+
+        <footer class="footer">
+            <div class="social">
+                    <a href="https://www.linkedin.com/in/hanagnat/"><i class='bx bxl-linkedin'></i></a>
+                    <a href="https://github.com/hannahgnatheer"><i class='bx bxl-github' ></i></a>
+                    <a href="https://www.instagram.com/hannah_gen_nat/"><i class='bx bxl-instagram' ></i></a>
+                    <a href="https://x.com/HannahNatheer"><i class='bx bxl-twitter' ></i></a>
+                </div>
+
+            <ul class="'list">
+                <li><a href="http://127.0.0.1:5500/My-Portfolio-main/myPage/index.html#home">About Me</a></li>
+                <li><a href="http://127.0.0.1:5500/My-Portfolio-main/myPage/index.html/#contact">Contact</a></li>
+                <li><a href="http://127.0.0.1:5500/My-Portfolio-main/myPage/index.html#testimonials">Testimonials</a></li>
+            </ul>
+
+            <p class="copyright"> @HannahNatheer | All rights reserved</p>
+        </footer>
+
+        <script src="script.js"></script>
+    </body>
+</html>

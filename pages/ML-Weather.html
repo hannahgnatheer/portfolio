@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width,initial-scale=1.0">
+        <title>
+            My Portfolio
+        </title>
+        <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+        <link rel="stylesheet" href="../ml.css">
+
+    </head>
+    <body>
+        <header class="header">
+            <a href="#home" class="logo">Hannah<span>Natheer</span></a>
+            <i class='bx bx-menu' id="menu-icon"></i>
+            <nav class="navbar" >
+                <a href="http://127.0.0.1:5500/My-Portfolio-main/myPage/index.html#home" class="active">Home</a>
+                <a href="http://127.0.0.1:5500/My-Portfolio-main/myPage/index.html/#education" >Education</a>
+                <a href="http://127.0.0.1:5500/My-Portfolio-main/myPage/index.html#testimonials" >Testimonials</a>
+                <a href="http://127.0.0.1:5500/My-Portfolio-main/myPage/index.html/#contact" >Contact</a>
+            </nav>
+        </header>
+
+        <section class="home ml-section" id="home">
+            <div class="home-content">
+                <h1 class="heading">Machine Learning based Weather Forecasting in South Wales</h1>
+                <h2>Summary</h2>
+                <p class="justify-text">Daily weather in South Wales was analysed using a merged historical dataset (1973 to 2025) spanning 17 stations and 322,983 records. Exploratory analysis showed sizeable gaps for snow/snowdepth/solar related fields, steady warming across seasons, most clearly in winter, and a post-2017 shift toward higher winter precipitation falling as rain rather than snow. Rain was by far the most frequent condition, consistent with rising precipitation and warmer winters. Correlation analysis highlighted strong links between rain and precipitation features (precip, precipprob, precipcover >0.6) and negative associations between clear conditions and cloud cover/humidity.</p>
+                <br>
+                <img class="center" src="../images/Weather/7.png" alt="">
+                <br>
+                <h2>Model Evaluation</h2>
+                <p class="justify-text">For multi-label condition forecasting, a MultiOutputClassifier was trained with several base learners; XGBoost performed best (accuracy ≈98.65%, macro-F1 ≈0.8085, precision ≈0.9965), narrowly ahead of Logistic Regression and Gradient Boosting, with Random Forest and Decision Trees close behind and LightGBM lowest among the tested models. Hyperparameter tuning (GridSearchCV/manual) identified compact trees/estimators as effective settings. Overall, ensemble/boosting approaches proved well-suited to South Wales’ nonlinear, microclimate-influenced patterns, but future work should incorporate real-time/hourly data and interpretability tooling to strengthen operational use.</p>
+                <div class="social-icons">
+                    <a href="https://drive.google.com/file/d/1lGivgn_kzibEqP-sB_JjREk0GRPsc7LC/view?usp=drive_link"><i class='bx bxl-github' ></i></a>
+                </div>
+            </div>
+        </section>
+        
+        <footer class="footer">
+            <div class="social">
+                    <a href="https://www.linkedin.com/in/hanagnat/"><i class='bx bxl-linkedin'></i></a>
+                    <a href="https://github.com/hannahgnatheer"><i class='bx bxl-github' ></i></a>
+                    <a href="https://www.instagram.com/hannah_gen_nat/"><i class='bx bxl-instagram' ></i></a>
+                    <a href="https://x.com/HannahNatheer"><i class='bx bxl-twitter' ></i></a>
+                </div>
+
+            <ul class="'list">
+                <li><a href="http://127.0.0.1:5500/My-Portfolio-main/myPage/index.html#home">About Me</a></li>
+                <li><a href="http://127.0.0.1:5500/My-Portfolio-main/myPage/index.html/#contact">Contact</a></li>
+                <li><a href="http://127.0.0.1:5500/My-Portfolio-main/myPage/index.html#testimonials">Testimonials</a></li>
+            </ul>
+
+            <p class="copyright"> @HannahNatheer | All rights reserved</p>
+        </footer>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+        <script src="../script.js"></script>        
+    </body>
+</html>
