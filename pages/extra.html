@@ -1,8 +1,3 @@
-<p>Developed daily weather forecasts for South Wales. XGBoost led the stack-beating Logistic Regression, Decision Trees, Random Forest, LightGBM, and Gradient Boosting, with 98.6% accuracy (macro-F1 0.81).</p>
-<p>Analyzed global B Corp data across regions/sectors. Built Auto ARIMA forecasts for sector growth and ANN/SVM/Random Forest models for impact-score prediction, identifying the top drivers and informing sustainability strategy</p>
-<p>Scraped and harmonised data across platforms. Analysed IMDb/YouTube engagement and sentiment for AGT and BGT using Python (pandas, BeautifulSoup) and Excel. Built Tableau dashboards that revealed declining engagement and informed re-engagement tactics</p>
-
-
         <section class="services" id="services">
             <h2 class="heading">Services</h2>
 
@@ -36,15 +31,3 @@
 
                 </div>
         </section>
-
-Daily weather in South Wales was analysed using a merged historical dataset (1973–2025) spanning 17 stations and 322,983 records.
-Exploratory analysis showed sizeable gaps for snow/snowdepth/solar-related fields, steady warming across seasons—most clearly in 
-winter, and a post-2017 shift toward higher winter precipitation falling as rain rather than snow. 
-Rain was by far the most frequent condition, consistent with rising precipitation and warmer winters. 
-Correlation analysis highlighted strong links between rain and precipitation features (precip, precipprob, precipcover >0.6) 
-and negative associations between clear conditions and cloud cover/humidity. For multi-label condition forecasting, 
-a MultiOutputClassifier was trained with several base learners; XGBoost performed best (accuracy: 98.65%, macro-F1: 0.8085, 
-precision: 0.9965), narrowly ahead of Logistic Regression and Gradient Boosting, with Random Forest and Decision Trees close behind 
-and LightGBM lowest among the tested models. Hyperparameter tuning (GridSearchCV/manual) identified compact trees/estimators as 
-effective settings. Overall, ensemble/boosting approaches proved well-suited to South Wales’ nonlinear, microclimate-influenced 
-patterns, but future work could incorporate real-time/hourly data and interpretability tooling to strengthen operational use.
